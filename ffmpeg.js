@@ -308,7 +308,7 @@ FFMPEG.prototype.handleStreamRequest = function(request) {
           '&pkt_size=' + packetsize;
 
         if(this.audio){
-          ffmpegCommand+= ' -map 0:1' +
+          ffmpegCommand+= ' -map 1:0' +
             ' -acodec ' + acodec +
             ' -profile:a aac_eld' +
             ' -flags +global_header' +
